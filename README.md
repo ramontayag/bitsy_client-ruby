@@ -18,7 +18,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+First, you have to tell the gem where to find the Bitsy server:
+
+    BitsyClient.site = "http://someserver.com:80"
+
+Then you can call:
+
+    BitsyClient::PaymentDepot.new(...)
+    BitsyClient::PaymentDepot.find(2)
 
 ## Testing
 
