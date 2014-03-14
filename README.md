@@ -20,6 +20,12 @@ Or install it yourself as:
 
 TODO: Write usage instructions here
 
+## Testing
+
+    bundle exec rspec spec
+
+If you delete the vcr cassettes, then when you run the specs it will attempt to connect to a Bitsy server at `http://localhost:3000`. If that does not start it will complain. Remember to start the Bitcoin daemon for Bitsy too.
+
 ## Contributing
 
 1. Fork it
