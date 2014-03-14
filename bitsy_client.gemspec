@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = BitsyClient::VERSION
   spec.authors       = ["Ramon Tayag"]
   spec.email         = ["ramon.tayag@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Bitsy Client gem used to create and query payment depots}
+  spec.summary       = %q{Interface with the Bitsy Bitcoin payment server}
   spec.homepage      = ""
   spec.license       = "MIT"
 
