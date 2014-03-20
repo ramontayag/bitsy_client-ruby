@@ -24,7 +24,16 @@ First, you have to tell the gem where to find the Bitsy server:
 
 Then you can call:
 
-    BitsyClient::PaymentDepot.new(...)
+    pd = BitsyClient::PaymentDepot.create(
+      min_payment: 0.2,
+      initial_tax_rate: 0.5,
+      added_tax_rate: 0.1,
+      tax_address: "the taxes go here",
+      owner_address: "the rest of the money goes here",
+    )
+    pd.id # the database id
+    pd.address # the payment depot's Bitcoin address
+
     BitsyClient::PaymentDepot.find(2)
 
 ## Testing
