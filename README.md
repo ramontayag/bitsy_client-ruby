@@ -36,6 +36,10 @@ Then you can call:
 
     BitsyClient::PaymentDepot.find(2)
 
+When Bitsy is running in a non-production mode, you can trigger the transaction sync manually:
+
+    BitsyClient::Sync.create
+
 ## Testing
 
     bundle exec rspec spec
