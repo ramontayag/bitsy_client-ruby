@@ -34,4 +34,15 @@ describe BitsyClient do
     end
   end
 
+  describe ".truncate" do
+    it "truncates the Bitsy database" do
+      uri = URI.parse("#{described_class.site}/truncations")
+      response = double
+      expect(Net::HTTP).to receive(:post_form).with(uri, {}).
+        and_return(response)
+      resulting_response = described_class.truncate
+      expect(resulting_response).to eq response
+    end
+  end
+
 end
