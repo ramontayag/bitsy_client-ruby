@@ -34,6 +34,17 @@ describe BitsyClient do
     end
   end
 
+  describe ".sync" do
+    it "triggers the transaction sync on Bitsy" do
+      uri = URI.parse("#{described_class.site}/syncs")
+      response = double
+      expect(Net::HTTP).to receive(:post_form).with(uri, {}).
+        and_return(response)
+      resulting_response = described_class.sync
+      expect(resulting_response).to eq response
+    end
+  end
+
   describe ".truncate" do
     it "truncates the Bitsy database" do
       uri = URI.parse("#{described_class.site}/truncations")

@@ -18,6 +18,11 @@ module BitsyClient
     ResourceBase.site = @@site
   end
 
+  def self.sync
+    uri = URI.parse("#{self.site}/syncs")
+    Net::HTTP.post_form(uri, {})
+  end
+
   def self.truncate
     uri = URI.parse("#{self.site}/truncations")
     Net::HTTP.post_form(uri, {})
