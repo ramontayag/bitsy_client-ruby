@@ -1,3 +1,7 @@
+# v0.3.0
+
+- Add `bitsy_payment_depot factory`
+
 # v0.2.0
 
 - Add `BitsyClient.truncate` to trigger truncation on Bitsy (see [this](https://github.com/ramontayag/bitsy/issues/6))

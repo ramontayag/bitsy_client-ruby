@@ -46,6 +46,25 @@ When Bitsy is running in a non-production mode, you can trigger the transaction 
 
 If you delete the vcr cassettes, then when you run the specs it will attempt to connect to a Bitsy server at `http://localhost:3000`. If that does not start it will complain. Remember to start the Bitcoin daemon for Bitsy too.
 
+## Factories
+
+You may include factories in your project. In the `spec_helper` or `test_helper`:
+
+    require "bitsy_client/factories"
+
+You have access to the `bitsy_payment_depot` factory. You can use it this way:
+
+```
+FactoryGirl.define do
+
+  factory :order do
+    product
+    association :payment_depot, factory: :bitsy_payment_depot
+  end
+
+end
+```
+
 ## Contributing
 
 1. Fork it
